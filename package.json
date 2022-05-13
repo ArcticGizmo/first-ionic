@@ -8,7 +8,8 @@
     "test:unit": "vue-cli-service test:unit",
     "test:e2e": "vue-cli-service test:e2e",
     "lint": "vue-cli-service lint",
-    "android": "ionic capacitor run android --livereload --external"
+    "android": "ionic capacitor run android --livereload --external",
+    "android.build": "ionic capacitor build android"
   },
   "dependencies": {
     "@capacitor/android": "3.5.1",

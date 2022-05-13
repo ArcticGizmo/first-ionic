@@ -1,0 +1,6 @@
+{
+	"appId": "com.github.arcticgizmo",
+	"appName": "first-ionic",
+	"webDir": "dist",
+	"bundledWebRuntime": false
+}
