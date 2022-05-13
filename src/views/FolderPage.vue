@@ -32,8 +32,8 @@
   </ion-page>
 </template>
 
-<script lang="ts">
-import { defineComponent } from "vue";
+<script>
+import { defineComponent } from 'vue';
 import {
   IonButtons,
   IonContent,
@@ -42,10 +42,10 @@ import {
   IonPage,
   IonTitle,
   IonToolbar,
-} from "@ionic/vue";
+} from '@ionic/vue';
 
 export default defineComponent({
-  name: "FolderPage",
+  name: 'FolderPage',
   components: {
     IonButtons,
     IonContent,
