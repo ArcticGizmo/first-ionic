@@ -2,7 +2,7 @@ import { createRouter, createWebHistory } from '@ionic/vue-router';
 
 import HomePage from '@/views/HomePage.vue';
 // https://ionic.io/ionicons
-import { homeSharp, cloudyNightSharp } from 'ionicons/icons';
+import { homeSharp, cloudyNightSharp, librarySharp, bookSharp } from 'ionicons/icons';
 
 const routes = [
   {
@@ -18,11 +18,27 @@ const routes = [
     },
   },
   {
-    path: '/Weather',
+    path: '/weather',
     component: () => import('@/views/WeatherPage.vue'),
     meta: {
       title: 'Weather',
       icon: cloudyNightSharp,
+    },
+  },
+  {
+    path: '/library',
+    component: () => import('@/views/LibraryPage.vue'),
+    meta: {
+      title: 'Library',
+      icon: librarySharp,
+    },
+  },
+  {
+    path: '/books',
+    component: () => import('@/views/BooksPage.vue'),
+    meta: {
+      title: 'Books',
+      icon: bookSharp,
     },
   },
   {

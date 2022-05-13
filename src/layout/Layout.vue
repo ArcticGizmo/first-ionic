@@ -6,7 +6,9 @@
           <ion-list-header>User Name</ion-list-header>
           <ion-note>Flavour text</ion-note>
 
-          <ion-menu-toggle :auto-hide="false" v-for="(page, index) in routes" :key="index">
+          <ion-searchbar v-model="search" />
+
+          <ion-menu-toggle :auto-hide="false" v-for="(page, index) in filteredRoutes" :key="index">
             <ion-item
               router-direction="root"
               :router-link="page.path"
@@ -50,9 +52,19 @@ import {
   IonMenuToggle,
   IonRouterOutlet,
   IonSplitPane,
+  IonSearchbar,
 } from '@ionic/vue';
 
 import { settingsSharp } from 'ionicons/icons';
+
+const fuzzysort = require('fuzzysort');
+
+function filterRoutes(rawRoutes, search) {
+  const routes = rawRoutes.map(r => {
+    return { ...r, title: r.meta.title };
+  });
+  return fuzzysort.go(search, routes, { key: 'title' }).map(r => r.obj);
+}
 
 export default {
   name: 'Layout',
@@ -69,6 +81,7 @@ export default {
     IonMenuToggle,
     IonRouterOutlet,
     IonSplitPane,
+    IonSearchbar,
   },
   props: {
     routes: { type: Array, default: () => [] },
@@ -76,7 +89,17 @@ export default {
   data() {
     return {
       settingsIcon: settingsSharp,
+      search: '',
     };
+  },
+  computed: {
+    filteredRoutes() {
+      if (!this.search) {
+        return this.routes;
+      }
+
+      return filterRoutes(this.routes, this.search);
+    },
   },
 };
 </script>
