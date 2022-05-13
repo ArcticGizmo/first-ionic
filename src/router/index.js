@@ -1,13 +1,28 @@
-import { createRouter, createWebHistory } from "@ionic/vue-router";
+import { createRouter, createWebHistory } from '@ionic/vue-router';
+
+import HomePage from '@/views/HomePage.vue';
+import { homeSharp } from 'ionicons/icons';
 
 const routes = [
   {
-    path: "",
-    redirect: "/folder/Inbox",
+    path: '',
+    redirect: '/home',
   },
   {
-    path: "/folder/:id",
-    component: () => import("../views/FolderPage.vue"),
+    path: '/home',
+    component: HomePage,
+    meta: {
+      title: 'Home',
+      icon: homeSharp,
+    },
+  },
+  {
+    path: '/settings',
+    components: () => import('@/views/SettingsPage.vue'),
+    meta: {
+      title: 'Settings',
+      hide: true,
+    },
   },
 ];
 

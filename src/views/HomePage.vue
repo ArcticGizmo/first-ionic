@@ -5,19 +5,13 @@
         <ion-buttons slot="start">
           <ion-menu-button color="primary"></ion-menu-button>
         </ion-buttons>
-        <ion-title>{{ $route.params.id }}</ion-title>
+        <ion-title>{{ $route.meta.title }}</ion-title>
       </ion-toolbar>
     </ion-header>
 
-    <ion-content :fullscreen="true">
-      <ion-header collapse="condense">
-        <ion-toolbar>
-          <ion-title size="large">{{ $route.params.id }}</ion-title>
-        </ion-toolbar>
-      </ion-header>
-
+    <ion-content>
       <div id="container">
-        <strong class="capitalize">{{ $route.params.id }}</strong>
+        <strong class="capitalize">{{ $route.fullPath }} -- {{ $route.meta.title }}</strong>
         <p>
           Explore
           <a
@@ -34,29 +28,28 @@
 </template>
 
 <script>
-import { defineComponent } from 'vue';
 import {
-  IonButtons,
+  IonPage,
   IonContent,
   IonHeader,
-  IonMenuButton,
-  IonPage,
-  IonTitle,
   IonToolbar,
+  IonButtons,
+  IonMenuButton,
+  IonTitle,
 } from '@ionic/vue';
 
-export default defineComponent({
-  name: 'FolderPage',
+export default {
+  name: 'HomePage',
   components: {
-    IonButtons,
-    IonContent,
-    IonHeader,
-    IonMenuButton,
     IonPage,
+    IonHeader,
     IonTitle,
     IonToolbar,
+    IonContent,
+    IonButtons,
+    IonMenuButton,
   },
-});
+};
 </script>
 
 <style scoped>
