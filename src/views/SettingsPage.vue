@@ -1,28 +1,26 @@
 <template>
-  <ion-page>
-    <ion-header :translucent="true">
-      <ion-toolbar>
-        <ion-buttons slot="start">
-          <ion-menu-button color="primary"></ion-menu-button>
-        </ion-buttons>
-        <ion-title>{{ $route.meta.title }}</ion-title>
-      </ion-toolbar>
-    </ion-header>
-  </ion-page>
+  <base-page>
+    <strong class="capitalize">Settings anyone?</strong>
+    <p>
+      Explore
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        href="https://ionicframework.com/docs/components"
+      >
+        UI Components
+      </a>
+    </p>
+  </base-page>
 </template>
 
 <script>
-import { IonPage, IonHeader, IonToolbar, IonButtons, IonMenuButton, IonTitle } from '@ionic/vue';
+import BasePage from '@/views/BasePage.vue';
 
 export default {
   name: 'SettingsPage',
   components: {
-    IonPage,
-    IonHeader,
-    IonToolbar,
-    IonButtons,
-    IonMenuButton,
-    IonTitle,
+    BasePage,
   },
 };
 </script>

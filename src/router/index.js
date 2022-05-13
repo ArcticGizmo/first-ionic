@@ -1,7 +1,8 @@
 import { createRouter, createWebHistory } from '@ionic/vue-router';
 
 import HomePage from '@/views/HomePage.vue';
-import { homeSharp } from 'ionicons/icons';
+// https://ionic.io/ionicons
+import { homeSharp, cloudyNightSharp } from 'ionicons/icons';
 
 const routes = [
   {
@@ -17,8 +18,16 @@ const routes = [
     },
   },
   {
+    path: '/Weather',
+    component: () => import('@/views/WeatherPage.vue'),
+    meta: {
+      title: 'Weather',
+      icon: cloudyNightSharp,
+    },
+  },
+  {
     path: '/settings',
-    components: () => import('@/views/SettingsPage.vue'),
+    component: () => import('@/views/SettingsPage.vue'),
     meta: {
       title: 'Settings',
       hide: true,
