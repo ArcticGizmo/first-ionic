@@ -2,7 +2,7 @@ import { createRouter, createWebHistory } from '@ionic/vue-router';
 
 import HomePage from '@/views/HomePage.vue';
 // https://ionic.io/ionicons
-import { homeSharp, cloudyNightSharp, librarySharp, bookSharp } from 'ionicons/icons';
+import { homeSharp, cloudyNightSharp, librarySharp, bookSharp, timerSharp } from 'ionicons/icons';
 
 const routes = [
   {
@@ -39,6 +39,14 @@ const routes = [
     meta: {
       title: 'Books',
       icon: bookSharp,
+    },
+  },
+  {
+    path: '/timer',
+    component: () => import('@/views/TimerPage.vue'),
+    meta: {
+      title: 'Timer',
+      icon: timerSharp,
     },
   },
   {
