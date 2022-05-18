@@ -1,5 +1,7 @@
 import { NativeAudio } from '@capacitor-community/native-audio';
 
+import { isPlatform } from '@ionic/vue';
+
 class AudioPlayer {
   constructor() {
     NativeAudio.preload({
@@ -19,4 +21,23 @@ class AudioPlayer {
   // }
 }
 
-export default new AudioPlayer();
+class AudioPlayerWeb {
+  constructor() {
+    this._player = new Audio(require('@/assets/sounds/chime.wav'));
+  }
+
+  alarm() {
+    this._player.play();
+    return Promise.resolve();
+  }
+}
+
+let av = null;
+
+if (isPlatform('desktop')) {
+  av = new AudioPlayerWeb();
+} else {
+  av = new AudioPlayer();
+}
+
+export default av;
