@@ -35,7 +35,7 @@ export default {
   },
   methods: {
     onRequestPermission() {
-      Notifications.requ().then(resp => {});
+      Notifications.requestPermission().then(() => {});
     },
 
     async onToast() {
