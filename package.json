@@ -25,8 +25,8 @@
     "core-js": "^3.6.5",
     "fuzzysort": "^1.9.0",
     "vue": "^3.2.21",
-    "vue-radial-progress": "^0.3.2",
-    "vue-router": "^4.0.12"
+    "vue-router": "^4.0.12",
+    "vue3-circle-progress": "^1.0.7"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",
