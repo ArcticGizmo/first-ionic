@@ -972,7 +972,7 @@
 
 "@capacitor-community/native-audio@^3.0.3":
   version "3.0.3"
-  resolved "https://registry.yarnpkg.com/@capacitor-community/native-audio/-/native-audio-3.0.3.tgz#189809b743cd6495622fc5ac0308d44404a80079"
+  resolved "https://registry.npmjs.org/@capacitor-community/native-audio/-/native-audio-3.0.3.tgz"
   integrity sha512-8yehITPADvirOhD957Y+Ril9INp5NqN7CtPwuslE+RazhRZdg2QOcUSVt6qgFv3n51vyUq2UjXExcCdg1GSqow==
 
 "@capacitor/android@3.5.1":
@@ -1014,7 +1014,7 @@
   dependencies:
     tslib "^2.1.0"
 
-"@capacitor/haptics@1.1.4":
+"@capacitor/haptics@^1.1.4":
   version "1.1.4"
   resolved "https://registry.npmjs.org/@capacitor/haptics/-/haptics-1.1.4.tgz"
   integrity sha512-+pJIb5X7xAcbrWj6rJaV+cwBlv8aFwB1/Ob6EV4atydThuuVSSsAL4hI4ZYlPNOxM6H5s+ZDLj7Pa2os4eFmtg==
@@ -1026,7 +1026,7 @@
 
 "@capacitor/local-notifications@^1.1.0":
   version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@capacitor/local-notifications/-/local-notifications-1.1.0.tgz#614c3d27fd6fe3f1d89bbed8dbdf4c7eaf234f08"
+  resolved "https://registry.npmjs.org/@capacitor/local-notifications/-/local-notifications-1.1.0.tgz"
   integrity sha512-l6S9rBylxGPq/U+xpJzZcOL4l2s8I2Igq7uDTidR4imIxxX3bLRz9nDSQREWsbQkFx7ALFm/5Y8PJGz2C6qKPw==
 
 "@capacitor/status-bar@1.0.8":
@@ -8302,7 +8302,7 @@ typedarray-to-buffer@^3.1.5:
 
 typescript@^4.6.4:
   version "4.6.4"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.6.4.tgz#caa78bbc3a59e6a5c510d35703f6a09877ce45e9"
+  resolved "https://registry.npmjs.org/typescript/-/typescript-4.6.4.tgz"
   integrity sha512-9ia/jWHIEbo49HfjrLGfKbZSuWo9iTMwXO+Ca3pRsSpbsMbc7/IU8NKdCZVRRBafVPGnoJeFL76ZOAA84I9fEg==
 
 unicode-canonical-property-names-ecmascript@^2.0.0:
@@ -8445,6 +8445,11 @@ vue-loader@^17.0.0:
     chalk "^4.1.0"
     hash-sum "^2.0.0"
     loader-utils "^2.0.0"
+
+vue-radial-progress@^0.3.2:
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/vue-radial-progress/-/vue-radial-progress-0.3.2.tgz#3a13f94435c3a5010935c1ff3d4ee5c93bd46d15"
+  integrity sha512-F4eA9IFqoY5ZPBJNsqIu3C8J6TQ/5aQxUOAy+6wjVOvK+ljjs/8g8gUpy5CE2/THDH68+avwqov3ibaG1AyZSQ==
 
 vue-router@^4.0.12:
   version "4.0.15"

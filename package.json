@@ -16,7 +16,7 @@
     "@capacitor/android": "3.5.1",
     "@capacitor/app": "1.1.1",
     "@capacitor/core": "3.5.1",
-    "@capacitor/haptics": "1.1.4",
+    "@capacitor/haptics": "^1.1.4",
     "@capacitor/keyboard": "1.2.2",
     "@capacitor/local-notifications": "^1.1.0",
     "@capacitor/status-bar": "1.0.8",
@@ -25,6 +25,7 @@
     "core-js": "^3.6.5",
     "fuzzysort": "^1.9.0",
     "vue": "^3.2.21",
+    "vue-radial-progress": "^0.3.2",
     "vue-router": "^4.0.12"
   },
   "devDependencies": {
