@@ -16,6 +16,7 @@
     <ion-button @click="onNotificationOld">Notification Old</ion-button>
     <ion-button @click="onNotificationSimple">Notification Simple</ion-button>
     <ion-button @click="onNotificationActions">Notification Simple</ion-button>
+    <ion-button @click="onCheckPlatform">Check Platforms</ion-button>
   </base-page>
 </template>
 
@@ -26,6 +27,8 @@ import Notifications from '@/code/notifications';
 // https://capacitorjs.com/docs/v2/apis/local-notifications
 // https://www.youtube.com/watch?v=bww4a4B43tM&ab_channel=SimonGrimm
 import { LocalNotifications } from '@capacitor/local-notifications';
+
+import { getPlatforms } from '@ionic/vue';
 
 export default {
   name: 'HomePage',
@@ -68,6 +71,10 @@ export default {
     },
     async onNotificationActions() {
       Notifications.withActions({ title: 'This is an action one', body: 'body', id: 3 });
+    },
+    async onCheckPlatform() {
+      const toast = await toastController.create({ message: getPlatforms(), duration: 5000 });
+      toast.present();
     },
   },
 };
