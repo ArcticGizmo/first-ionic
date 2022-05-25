@@ -46,7 +46,7 @@
 </template>
 
 <script>
-import BasePage from './BasePage.vue';
+import BasePage from '@/views/BasePage.vue';
 import { IonButton } from '@ionic/vue';
 
 import 'vue3-circle-progress/dist/circle-progress.css';
