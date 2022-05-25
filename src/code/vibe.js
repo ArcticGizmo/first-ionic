@@ -24,6 +24,11 @@ class Vibe {
   }
 }
 
-const vibe = isPlatform('desktop') ? new VibeWeb() : Vibe();
+let vibe;
+if (isPlatform('desktop')) {
+  vibe = new VibeWeb();
+} else {
+  vibe = new Vibe();
+}
 
 export default vibe;
